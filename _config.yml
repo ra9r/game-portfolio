@@ -1,0 +1,41 @@
+title: "Rodney Aiglstorfer"
+tagline: "Game & Systems Designer"
+description: "Game portfolio of Rodney Aiglstorfer – prototypes, shipped projects, experiments."
+url: "https://a9r.me"
+baseurl: ""  # important for apex custom domain
+
+# Collections for projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+# Simple nav config so layouts can loop
+nav:
+  - title: "Projects"
+    url: "/"
+  - title: "Skills"
+    url: "/skills/"
+  - title: "About"
+    url: "/about/"
+
+markdown: kramdown
+theme: null
+plugins: []   # keep it GitHub Pages–safe
+exclude:
+  - README.md
+  - LICENSE
+  - .github
