@@ -5,7 +5,7 @@ description: "Portfolio of Rodney Aiglstorfer – indie game developer, prototyp
 
 <div class="hero-intro">
   <h2 class="hero-title">INDIE GAME DEVELOPER</h2>
-  <p class="hero-subtitle"><em>... well, at least I aspiring to be!</em></p>
+  <p class="hero-subtitle"><em>... well, at least aspiring to be one!</em></p>
 
   <p class="hero-body">
 I’m Rodney Aiglstorfer, a game designer and developer. I enjoy taking ideas from <em>“wouldn’t it be cool if…”</em> through to working builds, and I tend to bounce between code, design docs, and playtests. 
