@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% assign tag_name = page.tag %}
+
+<section class="tag-hero">
+  <h1 class="tag-title">{{ tag_name }}</h1>
+  <p class="tag-subtitle">
+    Projects tagged with <span class="pill pill-inline">{{ tag_name }}</span>.
+  </p>
+</section>
+
+<div class="project-list">
+  {% assign tagged_projects = site.projects | sort: "year" | reverse %}
+  {% assign count = 0 %}
+  {% for project in tagged_projects %}
+    {% if project.tags contains tag_name %}
+      {% assign count = count | plus: 1 %}
+      <article class="project-card">
+        <h3 class="project-card-title">
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h3>
+        {% if project.short %}
+          <p class="project-card-text">{{ project.short }}</p>
+        {% endif %}
+        <div class="project-meta">
+          {% if project.year %}<span>{{ project.year }}</span>{% endif %}
+          {% if project.engine %}<span>{{ project.engine }}</span>{% endif %}
+        </div>
+        {% if project.tags %}
+        <ul class="project-tags-inline">
+          {% for t in project.tags %}
+            <li><a href="/tags/{{ t | downcase | replace: ' ', '-' }}/">{{ t }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p class="project-card-link">
+          <a href="{{ project.url | relative_url }}">View project →</a>
+        </p>
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% if count == 0 %}
+  <p>No projects found with this tag yet.</p>
+{% endif %}

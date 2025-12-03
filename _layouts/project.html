@@ -3,43 +3,72 @@ layout: default
 ---
 
 <article class="project">
+
   <header class="project-header">
     <h1 class="project-title">{{ page.title }}</h1>
+
     {% if page.tagline %}
       <p class="project-tagline">{{ page.tagline }}</p>
     {% endif %}
+
     <div class="project-meta">
-      {% if page.year %}<span>{{ page.year }}</span>{% endif %}
-      {% if page.engine %}<span>{{ page.engine }}</span>{% endif %}
-      {% if page.role %}<span>{{ page.role }}</span>{% endif %}
-      {% if page.status %}<span>{{ page.status }}</span>{% endif %}
+      {% if page.year %}
+        <span>{{ page.year }}</span>
+      {% endif %}
+      {% if page.engine %}
+        <span>{{ page.engine }}</span>
+      {% endif %}
+      {% if page.role %}
+        <span>{{ page.role }}</span>
+      {% endif %}
+      {% if page.status %}
+        <span>{{ page.status }}</span>
+      {% endif %}
     </div>
+
     {% if page.tags %}
-    <ul class="pill-list">
-      {% for tag in page.tags %}
-        <li class="pill">{{ tag }}</li>
-      {% endfor %}
-    </ul>
+      <ul class="project-tags-inline">
+        {% for t in page.tags %}
+          <li>
+            <a href="/tags/{{ t | downcase | replace: ' ', '-' }}/">
+              {{ t }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
+
     {% if page.links %}
-    <div class="project-links">
-      {% if page.links.github %}
-        <a href="{{ page.links.github }}" target="_blank" rel="noopener">GitHub</a>
-      {% endif %}
-      {% if page.links.itch %}
-        <a href="{{ page.links.itch }}" target="_blank" rel="noopener">itch.io</a>
-      {% endif %}
-      {% if page.links.video %}
-        <a href="{{ page.links.video }}" target="_blank" rel="noopener">Video</a>
-      {% endif %}
-      {% if page.links.docs %}
-        <a href="{{ page.links.docs }}" target="_blank" rel="noopener">Docs</a>
-      {% endif %}
-    </div>
+      <div class="project-links">
+        {% if page.links.github %}
+          <a href="{{ page.links.github }}" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        {% endif %}
+
+        {% if page.links.itch %}
+          <a href="{{ page.links.itch }}" target="_blank" rel="noopener">
+            itch.io
+          </a>
+        {% endif %}
+
+        {% if page.links.video %}
+          <a href="{{ page.links.video }}" target="_blank" rel="noopener">
+            Video
+          </a>
+        {% endif %}
+
+        {% if page.links.docs %}
+          <a href="{{ page.links.docs }}" target="_blank" rel="noopener">
+            Docs
+          </a>
+        {% endif %}
+      </div>
     {% endif %}
   </header>
 
   <section class="project-body">
     {{ content }}
   </section>
+
 </article>

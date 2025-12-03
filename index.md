@@ -5,14 +5,19 @@ description: "Portfolio of Rodney Aiglstorfer – indie game developer, prototyp
 
 <div class="hero-intro">
   <h2 class="hero-title">INDIE GAME DEVELOPER</h2>
-  <p class="hero-subtitle"><em>... aspiring to be.</em></p>
+  <p class="hero-subtitle"><em>... well, at least I aspiring to be!</em></p>
 
   <p class="hero-body">
-    My name is Rodney Aiglstorfer. I’m a creative technologist exploring games across
-    different platforms and tools. I enjoy combining design, engineering, and iteration to
-    build experiences that teach, surprise, or just feel good to play.
+I’m Rodney Aiglstorfer, a game designer and developer. I enjoy taking ideas from <em>“wouldn’t it be cool if…”</em> through to working builds, and I tend to bounce between code, design docs, and playtests. 
+</p>
+  <p class="hero-body">
+Recent work includes Playdate titles, Unreal escape-room experiences, and tools-oriented projects like virtual tabletops and learning games.
+</p>
+  <p class="hero-body">
+When I’m not building games I’m usually thinking about how to make game dev workflows smoother,
+how to teach complex topics through play, or how to ship more experiments.
   </p>
-
+<!--
   <p class="hero-body hero-body-tight">
     I’m especially interested in
     <span class="pill pill-inline">Game Design</span>
@@ -21,7 +26,7 @@ description: "Portfolio of Rodney Aiglstorfer – indie game developer, prototyp
     and
     <span class="pill pill-inline">Technical Implementation</span>.
   </p>
-
+-->
   <div class="social-links">
     <a class="social-circle" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
       in
@@ -36,21 +41,27 @@ description: "Portfolio of Rodney Aiglstorfer – indie game developer, prototyp
 </div>
 
 <div class="platform-strip" aria-label="Game platforms and technologies">
-  <div class="platform-card">
+
+  <a class="platform-card" href="/tags/unreal-engine/">
     <div class="platform-icon">UE</div>
     <div class="platform-label">Unreal Engine</div>
-  </div>
-  <div class="platform-card">
+  </a>
+
+  <a class="platform-card" href="/tags/unity/">
     <div class="platform-icon">U</div>
     <div class="platform-label">Unity</div>
-  </div>
-  <div class="platform-card">
+  </a>
+
+  <a class="platform-card" href="/tags/playdate/">
     <div class="platform-icon">PD</div>
     <div class="platform-label">Playdate</div>
-  </div>
-  <div class="platform-card">
+  </a>
+
+  <a class="platform-card" href="/tags/cpp/">
     <div class="platform-icon">C++</div>
     <div class="platform-label">C++</div>
-  </div>
+  </a>
+
 </div>
+
 
